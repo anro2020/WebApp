@@ -1,0 +1,27 @@
+﻿@model IEnumerable<UsuarioModel>
+
+<div class="card m-1">
+	<div class="card-body">
+		<table class="table text-center">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo electronico</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.usu_nombre</td>
+                <td>@r.usu_correo</td>
+                <td><buton class="btn btn-sm btn-secondary">Editar usuario</buton></td>
+                <td><button class="btn btn-sm btn-danger">Desactivar usuario</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+	</div>
+</div>

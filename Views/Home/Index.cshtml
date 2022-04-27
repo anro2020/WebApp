@@ -1,8 +1,24 @@
-﻿@{
+﻿@model UsuarioModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card card-inicio-sesion">
+    <div class="card-body" >
+        <form method="post" asp-controller="Usuario" asp-action="Dashboard">
+        <div class="form-group">
+            <input asp-for="usu_correo" type="text"  class="form-control mb-3 formulario-inicio-sesion" placeholder="Correo electronico">
+        </div>
+        <div class="form-group">
+            <input  asp-for="usu_contrasenia" type="password" class="form-control mb-3  formulario-inicio-sesion" placeholder="Contraseña">
+        </div>
+        <div class="form-group ">
+            <ul class="list-inline">
+                <li class="list-inline-item" ><a asp-controller="Usuario" asp-action="Registrar">¿Aun no tienes una cuenta?</a></li>
+                <li class="list-inline-item"><button type="submit" class="btn btn-primary btn-formulario-inicio-sesion">Inicar sesion</button></li>
+            </ul>
+        </div>
+        </form>
+    </div>
 </div>

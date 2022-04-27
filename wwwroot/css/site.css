@@ -16,3 +16,28 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.card-inicio-sesion {
+    transform: translate(80%, 100%);
+    width: 450px;
+    position: absolute;
+    display: block;
+
+}
+
+.formulario-inicio-sesion {
+    width: 400px;
+}
+
+.btn-formulario-inicio-sesion {
+    margin-left: 80px;
+}
+.card-formulario-registro {
+    transform: translate(80%, 50%);
+    width: 450px;
+    position: absolute;
+    display: block;
+}
+.btn-formulario-registro {
+    margin-left: 280px;
+}

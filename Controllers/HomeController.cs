@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebApp.Models;
 
 namespace WebApp.Controllers;
@@ -17,7 +18,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
     public IActionResult Privacy()
     {
         return View();

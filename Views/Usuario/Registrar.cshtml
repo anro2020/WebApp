@@ -1,0 +1,30 @@
+﻿@model UsuarioModel
+
+@if (Model.mensaje != string.Empty)
+{
+    <div class="alert alert-success mt-1" role="alert">
+        ¡Usuario registrado!
+    </div>
+}
+
+<div class="card card-formulario-registro">
+    <div class="card-body" >
+        <form method="post" asp-controller="Usuario" asp-action="Registrar">
+            <div class="form-group">
+                <input asp-for="usu_nombre" type="text"  class="form-control mb-3 formulario-inicio-sesion" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <input asp-for="usu_correo" type="text"  class="form-control mb-3 formulario-inicio-sesion" placeholder="Correo electronico">
+            </div>
+            <div class="form-group">
+                <input  asp-for="usu_contrasenia" type="password" class="form-control mb-3  formulario-inicio-sesion" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+                <input  asp-for="usu_confirmarContrasenia" type="password" class="form-control mb-3  formulario-inicio-sesion" placeholder="Confirmar Contraseña">
+            </div>
+            <div class="form-group ">
+                <button type="submit" class="btn btn-primary btn-formulario-registro">Crear usuario</button>
+            </div>
+        </form>
+    </div>
+</div>
